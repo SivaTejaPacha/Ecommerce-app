@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <style>
+    body {
+      margin: 0;
+      background: #edeaea;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* --- Navigation Toolbar --- */
+    .navbar {
+      background-color:#126159;
+      overflow: hidden;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar a {
+      color: white;
+      padding: 10px 16px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .navbar a:hover {
+      background-color: #575757;
+      border-radius: 6px;
+    }
+
+    /* --- Login Box --- */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 60px); /* Adjust height to avoid toolbar overlap */
+    }
+
+    .login-box {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      width: 320px;
+    }
+
+    .login-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .login-box input[type="text"],
+    .login-box input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .login-box button:hover {
+      background-color: #45a049;
+    }
+
+    .login-box .register {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .login-box .register a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+
+    details {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: #444;
+    }
+
+    details p {
+      margin-top: 8px;
+      padding-left: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Toolbar -->
+  <div class="navbar">
+    <div>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Help</a>
+    </div>
+    <div>
+      <a href="#">Login</a>
+    </div>
+  </div>
+
+  <!-- Login Form -->
+  <div class="container">
+    <div class="login-box">
+      <h2>Login</h2>
+      <form action="login_handler.php" method="post">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+      <div class="register">
+        Don't have an account? <a href="#">Register</a>
+      </div>
+
+      <details>
+        <summary>Need help with logging in?</summary>
+        <p>Enter your registered username and password.</p>
+        <p>Click "Forgot Password" if you can't remember your credentials.</p>
+        <p>For further support, email us at support@example.com</p>
+      </details>
+    </div>
+  </div>
+
+</body>
+</html>
