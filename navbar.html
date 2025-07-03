@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Navbar Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    /* --- NAVBAR --- */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      padding: 10px 20px;
+      color: white;
+      flex-wrap: wrap;
+    }
+
+    .navbar .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      transition: background 0.3s;
+    }
+
+    .navbar a:hover {
+      background-color: #575757;
+      border-radius: 4px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    /* --- DROPDOWN MENU --- */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #444;
+      min-width: 150px;
+      z-index: 1;
+      border-radius: 5px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      color: white;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #555;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* --- SEARCH BAR --- */
+    .search-bar input {
+      padding: 6px;
+      border-radius: 4px;
+      border: none;
+    }
+
+    /* --- HERO SECTION --- */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to right, #4caf50, #2e7d32);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 600px) {
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .search-bar {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .search-bar input {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">MySite</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <div class="dropdown">
+        <a href="#">Services ▾</a>
+        <div class="dropdown-content">
+          <a href="#">Web Design</a>
+          <a href="#">Development</a>
+          <a href="#">SEO</a>
+        </div>
+      </div>
+      <a href="#">Contact</a>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to My Website</h1>
+    <p>We build modern websites with great design and performance.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 MySite. All rights reserved.
+  </footer>
+
+</body>
+</html>
